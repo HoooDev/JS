@@ -47,7 +47,7 @@ const getActiveTodos = () => {
 
 const setLeftItems = () => {
 	const leftTodos = getActiveTodos()
-	leftItemElem.innerHTML = `${leftTodos.length} items left`
+	leftItemElem.innerHTML = `${leftTodos.length}개 남음`
 }
 
 const completeAll = () => {
@@ -190,15 +190,15 @@ const paintTodos = () => {
 	switch (currentShowType) {
 		case 'all':
 			const allTodos = getAllTodos()
-			allTodos.forEach(todo => {paintTodo(todo)})
+			allTodos.forEach(todo => { paintTodo(todo) })
 			break
 		case 'active':
 			const activeTodos = getActiveTodos()
-			activeTodos.forEach(todo => {paintTodo(todo)})
+			activeTodos.forEach(todo => { paintTodo(todo) })
 			break
 		case 'completed':
 			const completedTodos = getCompletedTodos()
-			completedTodos.forEach(todo => {paintTodo(todo)})
+			completedTodos.forEach(todo => { paintTodo(todo) })
 			break
 		default:
 			break
